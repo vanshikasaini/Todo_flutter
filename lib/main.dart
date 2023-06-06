@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todoapp/providers_app/todos.dart';
 import 'package:todoapp/screens/homepage.dart';
 
 void main() {
@@ -12,8 +14,9 @@ class MyApp extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context) => ChangeNotifierProvider(
+    create: (context) => TodosProvider(),
+    child: MaterialApp(
       debugShowCheckedModeBanner: false,
       title: title,
       theme: ThemeData(
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.lightBlueAccent
       ),
       home: HomePage(),
-    );
-  }
+    )
+  );
 }
 

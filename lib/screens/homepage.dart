@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:todoapp/main.dart';
-import 'package:todoapp/screens/todo_dialog.dart';
+import 'package:todoapp/widgets_app/todolistwidget.dart';
+import 'package:todoapp/widgets_app/todo_dialog.dart';
+
+import 'completedlistwidget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +19,8 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
    final tabs =[
-     Container(),Container()
+     ToDoListWidget(),
+     CompletedListWidget()
    ];
 return Scaffold(
   appBar: AppBar(
