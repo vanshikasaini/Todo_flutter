@@ -4,7 +4,7 @@ Installation link:
 
 
 ## Features
-
+Used Providers for state changes.
 - Add Note
 - Update Note
 - Delete Note
